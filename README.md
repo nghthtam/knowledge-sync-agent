@@ -64,3 +64,6 @@ Plaintext
 📌 Tổng số bài viết BỎ QUA (Skipped)   : 30
 =====================================
 ✅ Tiến trình kết thúc thành công. Exit Code: 0
+
+- **Daily Job Logs:** [Live Execution Logs](https://dashboard.render.com/cron/crn-d93m437lk1mc739hjvqg/logs?r=live)
+
