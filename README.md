@@ -53,17 +53,16 @@ Clean Sync: For any Updated status, the stale Cloud file is systematically purge
 Plaintext
 ==================================================
 🚀 BẮT ĐẦU CHẠY TIẾN TRÌNH ĐỒNG BỘ TRI THỨC HÀNG NGÀY
-==================================================
 🔄 [Scraper] Đang cào dữ liệu từ OptiSigns...
-
 📊 [Scraper Kết quả] Added: 0 | Updated: 0 | Skipped: 30
 
 ========== KẾT QUẢ JOB SỰ KIỆN ==========
 📌 Tổng số bài viết THÊM MỚI (Added) : 0
 📌 Tổng số bài viết CẬP NHẬT (Updated) : 0
 📌 Tổng số bài viết BỎ QUA (Skipped)   : 30
-=====================================
 ✅ Tiến trình kết thúc thành công. Exit Code: 0
 
 - **Daily Job Logs:** [Live Execution Logs](https://dashboard.render.com/cron/crn-d93m437lk1mc739hjvqg/logs?r=live)
+- **Screenshot:** <img width="1028" height="443" alt="image" src="https://github.com/user-attachments/assets/7c39c744-b10e-447e-8e25-2847f0672930" />
+
 
