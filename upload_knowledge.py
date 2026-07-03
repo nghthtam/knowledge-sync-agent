@@ -34,23 +34,21 @@ def sync_delta_to_gemini(delta_files):
         # Tiến hành nạp bản mới lên
         print(f"🚀 Đang tải lên bản mới: {file_name}...")
         try:
-            file_gemini = client.files.upload(file=file_path, mime_type="text/plain")
+            # Sửa dòng này:
+            file_gemini = client.files.upload(file=file_path, config={"mime_type": "text/plain"})
             time.sleep(0.5) # Chống Rate Limit
         except Exception as e:
             print(f"❌ Lỗi nạp file {file_name}: {e}")
 
     # Cập nhật lại toàn bộ danh sách URIs mới nhất vào file .env để Bot đọc ngầm
-    try:
-        all_current_files = client.files.list()
-        uris = [f.uri for f in all_current_files if f.name.endswith(".md") or "articles_md" in f.uri]
-        uris_string = ",".join(uris)
-        
-        with open(".env", "r") as f:
-            lines = f.readlines()
-        lines = [line for line in lines if "GEMINI_FILES_URIS" not in line]
-        with open(".env", "w") as f:
-            f.writelines(lines)
-            f.write(f"\nGEMINI_FILES_URIS={uris_string}")
-        print("💾 Đã làm mới danh sách liên kết tài liệu GEMINI_FILES_URIS trong file .env")
-    except Exception as e:
-        print(f"⚠️ Không thể cập nhật danh sách URI vào .env: {e}")
+    # Đổi đoạn ghi .env thành thế này cho an toàn:
+if os.path.exists(".env"):
+    with open(".env", "r") as f:
+        lines = f.readlines()
+    lines = [line for line in lines if "GEMINI_FILES_URIS" not in line]
+    with open(".env", "w") as f:
+        f.writelines(lines)
+        f.write(f"\nGEMINI_FILES_URIS={uris_string}")
+    print("💾 Đã làm mới danh sách liên kết tài liệu GEMINI_FILES_URIS trong file .env")
+else:
+    print("ℹ️ Không tìm thấy file .env trên môi trường Cloud, bỏ qua bước cập nhật file local.")
