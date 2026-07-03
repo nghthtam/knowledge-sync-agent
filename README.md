@@ -60,7 +60,9 @@ Plaintext
 
 ========== KẾT QUẢ JOB SỰ KIỆN ==========
 📌 Tổng số bài viết THÊM MỚI (Added) : 0
+
 📌 Tổng số bài viết CẬP NHẬT (Updated) : 0
+
 📌 Tổng số bài viết BỎ QUA (Skipped)   : 30
 =====================================
 ✅ Tiến trình kết thúc thành công. Exit Code: 0
