@@ -34,7 +34,7 @@ def sync_delta_to_gemini(delta_files):
         # Tiến hành nạp bản mới lên
         print(f"🚀 Đang tải lên bản mới: {file_name}...")
         try:
-            client.files.upload(file=file_path)
+            file_gemini = client.files.upload(file=file_path, mime_type="text/plain")
             time.sleep(0.5) # Chống Rate Limit
         except Exception as e:
             print(f"❌ Lỗi nạp file {file_name}: {e}")
