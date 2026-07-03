@@ -1,0 +1,4 @@
+.env
+sync_state.json
+articles_md/
+__pycache__/
