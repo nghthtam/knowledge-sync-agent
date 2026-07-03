@@ -58,7 +58,7 @@ Plaintext
 
 📊 [Scraper Kết quả] Added: 0 | Updated: 0 | Skipped: 30
 
-======== KẾT QUẢ JOB SỰ KIỆN ========
+========== KẾT QUẢ JOB SỰ KIỆN ==========
 📌 Tổng số bài viết THÊM MỚI (Added) : 0
 📌 Tổng số bài viết CẬP NHẬT (Updated) : 0
 📌 Tổng số bài viết BỎ QUA (Skipped)   : 30
